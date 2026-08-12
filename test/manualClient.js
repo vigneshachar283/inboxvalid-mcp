@@ -7,13 +7,13 @@ import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
 
 const TEST_CASES = [
-  "someone@gmail.com",       // expected: valid
-  "not-an-email",             // expected: invalid, malformed_syntax
-  "user@mailinator.com",      // expected: risky, disposable_domain
-  "user@this-domain-should-not-exist-xyz123.com", // expected: invalid, no_mx_record
-  "  someone@gmail.com  ",    // expected: valid — leading/trailing whitespace is trimmed, not rejected
-  "some one@gmail.com",       // expected: invalid, contains_whitespace (internal space)
-  "",                          // expected: invalid, empty
+  "someone@gmail.com",     
+  "not-an-email",            
+  "user@mailinator.com",      
+  "user@this-domain-should-not-exist-xyz123.com", 
+  "  someone@gmail.com  ",   
+  "some one@gmail.com",       
+  "",                          
 ];
 
 async function main() {
