@@ -17,7 +17,7 @@ export function checkSyntax(rawEmail) {
     return { ok: false, reason: "empty" };
   }
   if (email.length > 254) {
-    // RFC 5321 hard limit on total address length
+    
     return { ok: false, reason: "too_long" };
   }
   if (/\s/.test(email)) {
@@ -29,7 +29,7 @@ export function checkSyntax(rawEmail) {
 
   const [localPart, domain] = email.split("@");
   if (localPart.length > 64) {
-    // RFC 5321 local-part limit
+   
     return { ok: false, reason: "local_part_too_long" };
   }
 

@@ -1,24 +1,8 @@
 // MX plausibility check.
-//
-// This one is NOT mocked - it's a real DNS MX lookup using Node's built-in
-// `dns` module. It's cheap, requires no external service, and is a genuine
-// signal (a domain with no MX records can't receive mail, full stop).
-//
-// Network calls fail in ways syntax checks don't: timeouts, resolver errors,
-// transient DNS flakiness. The brief says "do not block on network errors -
-// fail open gracefully," so a timeout or DNS error here returns `ok: true`
-// with a `checked: false` flag rather than marking the email invalid -
-// we never want a flaky resolver to reject a real user's signup.
 
 import dns from "node:dns/promises";
 
-// Pin known-public resolvers instead of trusting whatever the OS network
-// stack hands us. The OS-configured resolver is environment-dependent -
-// it can be unreachable behind certain VPNs, corporate networks, or
-// misconfigured adapters (observed firsthand: ECONNREFUSED against the
-// default Windows resolver during dev). Pinning trades a small amount of
-// flexibility for a check that behaves the same in every environment it
-// runs in, which matters more for a plausibility check like this one.
+
 dns.setServers(["8.8.8.8", "1.1.1.1"]);
 
 const LOOKUP_TIMEOUT_MS = 2500;

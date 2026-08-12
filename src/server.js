@@ -22,11 +22,7 @@ server.registerTool(
     },
   },
   async ({ address }) => {
-    // Defensive: the tool contract promises it never throws for a bad
-    // address - verifyEmail already handles malformed input gracefully,
-    // but this catch guards against anything unexpected (e.g. DNS module
-    // internals) so a caller always gets a structured result, not an
-    // MCP-level error.
+   
     try {
       const result = await verifyEmail(address);
       return {
