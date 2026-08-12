@@ -1,0 +1,19 @@
+{
+  "name": "inboxvalid-mcp",
+  "version": "1.0.0",
+  "description": "MCP server exposing a verify_email tool for InboxValid.ai (Tvaram internship assignment, Task 2 Option A)",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test test/*.test.js",
+    "demo": "node test/manualClient.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^4.4.3"
+  }
+}
