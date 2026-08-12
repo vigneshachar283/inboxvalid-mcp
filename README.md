@@ -160,7 +160,6 @@ inboxvalid-mcp/
   one-file change.
 - Cache MX results by domain (they change slowly) to cut lookup latency
   on repeat checks.
-- Add a `bulk_verify_emails(addresses[])` tool for batch workloads.
 - Add rate limiting/concurrency controls around the network-bound step.
 
 ## Assumptions
