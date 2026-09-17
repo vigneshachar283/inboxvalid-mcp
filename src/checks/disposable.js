@@ -1,10 +1,4 @@
-// Disposable-domain check.
-//
-// MOCKED: in production this would be a maintained, frequently-updated list
-// (e.g. a synced dataset like github.com/disposable-email-domains, or
-// InboxValid's own proprietary feed) - not a hardcoded array. The list is
-// isolated in its own module specifically so swapping the source (file ->
-// database -> external API) later touches only this file, nothing else.
+
 
 const DISPOSABLE_DOMAINS = new Set([
   "mailinator.com",
