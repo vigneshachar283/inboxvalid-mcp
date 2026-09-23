@@ -57,7 +57,7 @@ export async function verifyEmail(rawEmail, dependencies = {}) {
     };
   }
 
-  if (!disposable.ok || !mx.checked) {
+if (!disposable.ok || !mx.checked) {
     // Disposable domain, or we couldn't confirm MX due to a network
     // hiccup - flag as risky rather than silently passing or hard-failing.
     return {
