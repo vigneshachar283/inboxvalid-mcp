@@ -68,7 +68,7 @@ if (!disposable.ok || !mx.checked) {
     };
   }
 
-  return {
+return {
     email: syntax.normalized,
     status: "valid",
     reason: "ok",
