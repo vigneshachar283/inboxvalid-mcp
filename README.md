@@ -15,6 +15,7 @@ order and returns a structured result:
 3. **MX record** — a real DNS MX lookup confirming mail-routing
    plausibility (not mocked).
 
+
 Checks run in this order because syntax and disposable-domain checks are
 local and free, while MX is the only network-bound step — so a
 malformed address never triggers a DNS call at all.
