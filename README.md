@@ -45,6 +45,7 @@ malformed address never triggers a DNS call at all.
 machine-readable code for quick branching; `checks` gives the per-stage
 breakdown for logging/debugging.
 
+
 ## Why MCP instead of REST
 
 The assignment asks for a clean, well-typed tool interface another
