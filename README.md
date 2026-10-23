@@ -1,4 +1,4 @@
-# inboxvalid-mcp
+# Inboxvalid-mcp
 
 An MCP server exposing a `verify_email` tool, built for the InboxValid.ai
 internship assignment (Task 2, Option A).
