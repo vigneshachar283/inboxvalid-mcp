@@ -12,6 +12,7 @@ const DISPOSABLE_DOMAINS = new Set([
   "sharklasers.com",
   "dispostable.com",
 ]);
+
 export function checkDisposable(domain) {
   const isDisposable = DISPOSABLE_DOMAINS.has(domain.toLowerCase());
   return {
