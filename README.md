@@ -169,5 +169,6 @@ inboxvalid-mcp/
 - "MX-style plausibility" means confirming the domain has mail routing,
   not proving a specific mailbox exists.
 - Disposable-domain data source is mocked, per the brief's explicit
-  allowance.
+  allowance
+
 
