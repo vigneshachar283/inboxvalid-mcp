@@ -170,3 +170,4 @@ inboxvalid-mcp/
   not proving a specific mailbox exists.
 - Disposable-domain data source is mocked, per the brief's explicit
   allowance.
+
